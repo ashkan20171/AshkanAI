@@ -109,16 +109,37 @@ sendBtn.onclick = async () => {
 
 // AI Response System (Will connect to GPT API later)
 async function generateAIResponse(userText) {
+    addMessageToUI("ai", "… در حال فکر کردن");
 
-    // Temporary smart placeholder
-    const aiText = `🤖 (در حال پردازش...) برای ورودی: "${userText}"`;
+    const response = await fetch("https://api.deepinfra.com/v1/openai/chat/completions", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer rQCEDjMICZP0Wyr5SgYmInilhSUMODjW"
 
-    addMessageToUI("ai", aiText);
+        },
+        body: JSON.stringify({
+            model: "meta-llama/Meta-Llama-3.1-70B-Instruct",
+            messages: [
+                { role: "system", content: "You are Ashkan AI, a powerful, adaptive, friendly assistant with deep knowledge. Always respond helpfully." },
+                { role: "user", content: userText }
+            ],
+            temperature: 0.7,
+            max_tokens: 4000
+        })
+    });
 
-    // Save AI message to DB
+    const data = await response.json();
+    const aiReply = data.choices?.[0]?.message?.content || "مشکلی پیش آمد.";
+
+    // نمایش در UI
+    addMessageToUI("ai", aiReply);
+
+    // ذخیره در پایگاه داده
     await supabase.from("messages").insert([
-        { workspace_id: currentWorkspace, sender: "ai", content: aiText }
+        { workspace_id: currentWorkspace, sender: "ai", content: aiReply }
     ]);
 
     scrollToBottom();
 }
+
