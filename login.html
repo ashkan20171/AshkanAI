@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashkan AI – Login</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body class="auth-body">
+
+<div class="auth-container">
+    <h1 id="title">Ashkan AI</h1>
+
+    <div class="lang-switch">
+        <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('fa')">FA</button>
+    </div>
+
+    <div class="form-group">
+        <input type="email" id="email" placeholder="" />
+    </div>
+
+    <div class="form-group">
+        <input type="password" id="password" placeholder="" />
+    </div>
+
+    <button class="btn" onclick="login()"
+        id="login-btn"></button>
+
+    <p id="switch-text"></p>
+    <button class="link-btn" onclick="toggleMode()" id="switch-link"></button>
+
+</div>
+
+<script src="assets/lang/en.json" type="application/json" id="lang-en"></script>
+<script src="assets/lang/fa.json" type="application/json" id="lang-fa"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
