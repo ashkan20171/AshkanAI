@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashkan AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar Workspaces -->
+    <aside id="workspaces">
+        <div class="logo">Ashkan AI</div>
+        <div class="workspace-list" id="workspaceList"></div>
+        <button id="newWorkspaceBtn">+ New Workspace</button>
+    </aside>
+
+    <!-- Tools Panel -->
+    <aside id="toolsPanel">
+        <h3>AI Tools</h3>
+        <button data-tool="summarize">Summarize Text</button>
+        <button data-tool="tts">Text → Speech</button>
+        <button data-tool="stt">Speech → Text</button>
+        <button data-tool="image">Generate Image</button>
+    </aside>
+
+    <!-- Chat Window -->
+    <main id="chatWindow">
+        <div id="messages"></div>
+
+        <div id="chatInputArea">
+            <textarea id="userInput" placeholder="Ask anything..."></textarea>
+            <button id="sendBtn">Send</button>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>

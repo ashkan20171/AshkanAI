@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #0f172a, #0b1220);
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Layout */
+.layout {
+    width: 100%;
+    display: flex;
+}
+
+/* Workspaces Sidebar */
+#workspaces {
+    width: 260px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.workspace-list div {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.workspace-list div:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* Tools Panel */
+#toolsPanel {
+    width: 200px;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+}
+
+/* Chat Window */
+#chatWindow {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.message {
+    margin-bottom: 14px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    max-width: 70%;
+}
+
+.user {
+    align-self: flex-end;
+    background: #4f8bff;
+}
+
+.ai {
+    align-self: flex-start;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+/* Chat Input */
+#chatInputArea {
+    display: flex;
+    gap: 10px;
+}
+
+#userInput {
+    flex: 1;
+    height: 50px;
+    border-radius: 12px;
+    padding: 12px;
+    background: rgba(255,255,255,0.08);
+    border: none;
+    color: #fff;
+    resize: none;
+}
+
+#sendBtn {
+    padding: 0 22px;
+    border-radius: 12px;
+    background: #3c7fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+#sendBtn:hover {
+    background: #256dff;
+}

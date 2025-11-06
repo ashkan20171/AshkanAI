@@ -1,11 +1,9 @@
 {
-  "app_title": "اشکان هوش",
-  "login": "ورود",
-  "register": "ثبت‌نام",
+  "title": "اشکان هوش",
   "email": "ایمیل",
   "password": "رمز عبور",
-  "name": "نام کامل",
-  "start_chat": "شروع چت جدید",
-  "ask_placeholder": "هر چیزی دوست داری بپرس...",
-  "pro_locked": "این قابلیت مخصوص نسخه پرو است"
+  "login": "ورود",
+  "register": "ثبت‌نام",
+  "switch_to_register": "حساب ندارید؟ ثبت‌نام کنید",
+  "switch_to_login": "حساب دارید؟ وارد شوید"
 }

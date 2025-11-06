@@ -1,11 +1,9 @@
 {
-  "app_title": "Ashkan AI",
-  "login": "Login",
-  "register": "Sign Up",
+  "title": "Ashkan AI",
   "email": "Email",
   "password": "Password",
-  "name": "Full Name",
-  "start_chat": "Start a new chat",
-  "ask_placeholder": "Ask anything...",
-  "pro_locked": "This feature requires Pro account"
+  "login": "Login",
+  "register": "Sign Up",
+  "switch_to_register": "Don't have an account? Create one",
+  "switch_to_login": "Already have an account? Login"
 }
